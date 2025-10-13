@@ -1,0 +1,26 @@
+flutter pub get
+flutter pub outdated
+flutter pub upgrade --major-versions
+
+
+flutter run -d chrome
+
+API_BASE_URL=http://localhost:8000/api/
+
+API_BASE_URL=http://127.0.0.1:8000/api/
+
+
+flutter run --profile
+
+#EL EL PEFIL DE invnitado
+incognito
+invitado2025
+
+#run file
+flutter run -d "TECNO BF7"
+flutter run -d "TECNO KL4h"
+
+
+flutter clean
+flutter pub get
+flutter run
