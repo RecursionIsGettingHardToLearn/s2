@@ -8,12 +8,14 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-
-void main() async {
+import 'screens/abogado/caso_list_screen.dart';
+import 'screens/abogado/expediente_list_screen.dart';
+import 'screens/abogado/carpeta_list_screen.dart';
+import 'screens/abogado/tipo_documento_list_screen.dart';
+import 'screens/abogado/documento_list_screen.dart';
+import 'screens/cliente.dart';void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: ".env");
-
-  
   runApp(const MyApp());
 }
 
@@ -48,6 +50,12 @@ class _MyAppState extends State<MyApp> {
 
         // abogado routes
         AppRoutes.abogadoDashboard: (context) => const AbogadoHomePage(),
+        AppRoutes.abogadoMisCasos: (context) =>  CasoListScreen(),
+        AppRoutes.abogadoExpedientes: (context) =>  ExpedienteListScreen(),
+        AppRoutes.abogadoGestionCarpeta: (context) =>  CarpetaListScreen(),
+        AppRoutes.abogadoTipoDocumento: (context) =>  TipoDocumentoListScreen(),
+        AppRoutes.abogadoGestionDocumentos: (context) =>  DocumentoListScreen(),
+
         
 
         // cliente routes
@@ -119,6 +127,8 @@ Future<String?> _fetchUserRole(String accessToken) async {
         'Authorization': 'Bearer $accessToken', // Token de autenticación
       },
     );
+ // Aquí agregamos el print para ver la respuesta
+    print('Respuesta del servidor: ${response.body}');  // Esto imprimirá toda la respuesta JSON
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> userData = jsonDecode(response.body);
@@ -184,7 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _passwordController = TextEditingController();
   bool _isLoading = false;
   String _errorMessage = '';
-
+  bool _isPasswordVisible = false; 
   Future<void> _login() async {
     setState(() {
       _isLoading = true;
@@ -345,11 +355,21 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 20),
               TextField(
                 controller: _passwordController,
-                obscureText: true,
-                decoration: const InputDecoration(
+                obscureText: !_isPasswordVisible,  // Ocultar o mostrar contraseña
+                decoration: InputDecoration(
                   labelText: 'Contraseña',
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.lock),
+                  border: const OutlineInputBorder(),
+                  prefixIcon: const Icon(Icons.lock),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _isPasswordVisible ? Icons.visibility : Icons.visibility_off,  // Cambiar ícono según visibilidad
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _isPasswordVisible = !_isPasswordVisible;  // Alternar visibilidad
+                      });
+                    },
+                  ),
                 ),
               ),
               const SizedBox(height: 30),

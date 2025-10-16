@@ -16,8 +16,12 @@ class AppRoutes {
   static const String abogadoDashboard = '/abogado/dashboard';
   static const String abogadoPerfil = '/abogado/perfil';
   static const String abogadoMisCasos = '/abogado/mis-casos';
-  static const String abogadoAsignarCasos = '/abogado/asignar-casos';
+  static const String abogadoExpedientes = '/abogado/expedientes';
+  static const String abogadoGestionCarpeta = '/abogado/gestion-carpeta';
+  static const String abogadoTipoDocumento = '/abogado/gestion-tipo-documento';
   static const String abogadoGestionDocumentos = '/abogado/gestion-documentos';
+
+  static const String abogadoAsignarCasos = '/abogado/asignar-casos';
   static const String abogadoPartesProcesales = '/abogado/partes-procesales';
   static const String abogadoConsultas = '/abogado/consultas';
   static const String abogadoCambiarContra = '/abogado/cambiar-contra';

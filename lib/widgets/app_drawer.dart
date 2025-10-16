@@ -32,7 +32,7 @@ class _AppDrawerState extends State<AppDrawer> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           UserAccountsDrawerHeader( // Usa UserAccountsDrawerHeader para una mejor presentación
-            accountName: Text('Residente', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            accountName: Text('', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
             accountEmail: Text('Rol: ${widget.userRole}', style: const TextStyle(color: Colors.white70)),
             currentAccountPicture: const CircleAvatar(
               backgroundColor: Colors.white,

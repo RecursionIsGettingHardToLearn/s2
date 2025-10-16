@@ -36,11 +36,6 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
           title: 'Ver Mis Casos',
           icon: FontAwesomeIcons.legal,
         ),
-        MenuItem(
-          to: AppRoutes.clienteConsultas,
-          title: 'Consultas Legales',
-          icon: FontAwesomeIcons.comments,
-        ),
       ],
     ),
     MenuItem(
@@ -52,13 +47,9 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
           title: 'Mis Documentos',
           icon: FontAwesomeIcons.paperclip,
         ),
-        MenuItem(
-          to: AppRoutes.clienteConsultasDocumentos,
-          title: 'Consultas de Documentos',
-          icon: FontAwesomeIcons.fileSignature,
-        ),
       ],
     ),
+     /*
     MenuItem(
       title: 'Finanzas',
       icon: FontAwesomeIcons.moneyBillWave,
@@ -70,6 +61,7 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
         ),
       ],
     ),
+    
     MenuItem(
       title: 'Comunicación',
       icon: FontAwesomeIcons.bullhorn,
@@ -86,6 +78,7 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
         ),
       ],
     ),
+    */
     MenuItem(
       title: 'Perfil',
       icon: FontAwesomeIcons.user,
@@ -95,11 +88,13 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
           title: 'Ver Perfil',
           icon: FontAwesomeIcons.userCircle,
         ),
+        /*
         MenuItem(
           to: AppRoutes.clienteCambiarContra,
           title: 'Cambiar Contraseña',
           icon: FontAwesomeIcons.key,
         ),
+        */
         MenuItem(
           title: 'Cerrar Sesión',
           icon: FontAwesomeIcons.signOutAlt, // Ícono de logout
@@ -123,29 +118,34 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
           title: 'Ver Mis Casos',
           icon: FontAwesomeIcons.legal,
         ),
-        MenuItem(
-          to: AppRoutes.abogadoAsignarCasos,
-          title: 'Asignar Casos',
-          icon: FontAwesomeIcons.sitemap,
+         MenuItem(
+          to: AppRoutes.abogadoExpedientes,
+          title: 'Ver Expedientes',
+          icon: FontAwesomeIcons.legal,
         ),
+         MenuItem(
+          to: AppRoutes.abogadoGestionCarpeta,
+          title: 'Ver Carpetas',
+          icon: FontAwesomeIcons.folder,
+        ),
+      
       ],
     ),
+    
     MenuItem(
       title: 'Documentos',
       icon: FontAwesomeIcons.fileAlt,
       subItems: [
         MenuItem(
-          to: AppRoutes.abogadoGestionDocumentos,
-          title: 'Gestionar Documentos',
-          icon: FontAwesomeIcons.filePdf,
+          to: AppRoutes.abogadoTipoDocumento,
+          title: 'Tipo Documentos',
+          icon: FontAwesomeIcons.file,
         ),
-        MenuItem(
-          to: AppRoutes.abogadoPartesProcesales,
-          title: 'Partes Procesales',
-          icon: FontAwesomeIcons.fileContract,
-        ),
+        
+       
       ],
     ),
+     /*
     MenuItem(
       title: 'Consultas',
       icon: FontAwesomeIcons.comments,
@@ -157,20 +157,27 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
         ),
       ],
     ),
+    */
     MenuItem(
       title: 'Perfil',
       icon: FontAwesomeIcons.user,
       subItems: [
+        /*
+        
+        
         MenuItem(
           to: AppRoutes.abogadoPerfil,
           title: 'Ver Perfil',
           icon: FontAwesomeIcons.userCircle,
-        ),
+        ),*/
+
+        /*
         MenuItem(
           to: AppRoutes.abogadoCambiarContra,
           title: 'Cambiar Contraseña',
           icon: FontAwesomeIcons.key,
         ),
+        */
         MenuItem(
           title: 'Cerrar Sesión',
           icon: FontAwesomeIcons.signOutAlt, // Ícono de logout
@@ -190,7 +197,7 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
       icon: FontAwesomeIcons.gavel,
       subItems: [
         MenuItem(
-          to: AppRoutes.asistenteCasosAsignados,
+          to: AppRoutes.abogadoMisCasos,
           title: 'Ver Casos Asignados',
           icon: FontAwesomeIcons.list,
         ),
@@ -207,6 +214,7 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
         ),
       ],
     ),
+    /*
     MenuItem(
       title: 'Tareas',
       icon: FontAwesomeIcons.tasks,
@@ -251,6 +259,7 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
         ),
       ],
     ),
+    */
     MenuItem(
       title: 'Perfil',
       icon: FontAwesomeIcons.user,
@@ -260,11 +269,13 @@ final Map<String, List<MenuItem>> menuItemsByRole = {
           title: 'Ver Perfil',
           icon: FontAwesomeIcons.userCircle,
         ),
+        /*
         MenuItem(
           to: AppRoutes.asistenteCambiarContra,
           title: 'Cambiar Contraseña',
           icon: FontAwesomeIcons.key,
         ),
+        */
         MenuItem(
           title: 'Cerrar Sesión',
           icon: FontAwesomeIcons.signOutAlt, // Ícono de logout

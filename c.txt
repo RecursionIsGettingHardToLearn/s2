@@ -24,3 +24,16 @@ flutter run -d "TECNO KL4h"
 flutter clean
 flutter pub get
 flutter run
+
+temp
+username password abogado   
+admin angelica2025  abogado
+
+
+username password cliemt
+custom cliente2025 cliente
+
+
+
+username password ayudante
+help ayudante2025
